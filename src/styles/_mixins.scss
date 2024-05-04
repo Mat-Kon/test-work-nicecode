@@ -1,6 +1,18 @@
+@import './variables';
+
 @mixin flex($dir: row, $just: center, $align: center) {
   display: flex;
   flex-direction: $dir;
   justify-content: $just;
   align-items: $align;
+}
+
+@mixin manageBtn() {
+  width: 34px;
+  height: 34px;
+  background-color: $color-grey;
+  border-radius: 50%;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
 }

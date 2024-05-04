@@ -1,0 +1,6 @@
+@import '../../../styles/mixins';
+
+.searchBtn {
+  @include manageBtn;
+  background-image: url('../../../assets/icons/search.svg');
+}
