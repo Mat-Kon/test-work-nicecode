@@ -1,0 +1,6 @@
+@import '../../../styles/mixins';
+
+.addContactBtn {
+  @include manageBtn;
+  background-image: url('../../../assets/icons/plus.svg');
+}
