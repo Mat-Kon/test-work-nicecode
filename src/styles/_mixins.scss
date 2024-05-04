@@ -10,9 +10,15 @@
 @mixin manageBtn() {
   width: 34px;
   height: 34px;
-  background-color: $color-grey;
+  background-color: $color-grey-light;
   border-radius: 50%;
   border: none;
   background-repeat: no-repeat;
   background-position: center;
+  transition: all 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-blue;
+  }
 }

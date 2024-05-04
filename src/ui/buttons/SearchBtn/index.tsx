@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-const SearchBtn: React.FC = () => {
+interface SearchBtnProps {
+  setOpen: () => void;
+}
+
+const SearchBtn: React.FC<SearchBtnProps> = ({ setOpen }) => {
   return (
-    <button className={styles.searchBtn}></button>
+    <button className={styles.searchBtn} onClick={setOpen}></button>
   );
 };
 

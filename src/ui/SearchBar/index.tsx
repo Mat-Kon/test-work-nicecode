@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from './style.module.scss';
 import SearchBtn from "../buttons/SearchBtn";
 import SortBtn from "../buttons/SortBtn";
 import AddContactBtn from "../buttons/AddContactBtn";
+import SearchForm from "../SearchForm";
 
 const SearchBar: React.FC = () => {
+  const [isOpenSearch, setOpenSearch] = useState(false);
   return (
-    <div style={{ display: 'flex', alignItems: 'center', boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', padding: '10px', borderRadius: '8px' }}>
-      <SearchBtn />
-      <input type="text" placeholder="Поиск" style={{ flex: 1, border: 'none', outline: 'none' }}/>
-      <SortBtn />
-      <AddContactBtn />
+    <div className={styles.searchBar}>
+      {!isOpenSearch && <SearchBtn setOpen={setOpenSearch.bind(null, true)} />}
+      {isOpenSearch && <SearchForm setCloseForm={setOpenSearch.bind(null, false)} />}
+      <div className={styles.rightBtns}>
+        {!isOpenSearch && <SortBtn />}
+        {!isOpenSearch && <AddContactBtn />}
+      </div>
     </div>
   );
 };

@@ -1,9 +1,13 @@
 import React from 'react';
 import styles from './styles.module.scss';
 
-const AddContactBtn: React.FC = () => {
+interface AddContactBtnProps {
+  propStyles?: React.CSSProperties;
+}
+
+const AddContactBtn: React.FC<AddContactBtnProps> = ({ propStyles }) => {
   return (
-    <button className={styles.addContactBtn}></button>
+    <button className={styles.addContactBtn} style={propStyles}></button>
   );
 };
 
