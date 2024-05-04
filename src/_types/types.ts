@@ -1,6 +1,9 @@
-interface User {
+export interface User {
   id: string;
-  name: string;
+  name: string | null;
+  age: number;
+  gender: 'male' | 'female';
+  email: string;
   avatar: string | null;
   notes: Note[];
   consultations: Consultation[];
@@ -24,6 +27,7 @@ interface Consultation {
 }
 
 interface Video {
+  id: string;
   url: string;
   cover: string | null;
   title: string;
