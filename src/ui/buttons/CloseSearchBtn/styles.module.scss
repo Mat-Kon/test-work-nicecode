@@ -1,0 +1,7 @@
+@import '../../../styles/mixins';
+
+.closeSearchBtn {
+  @include manageBtn;
+  background-image: url('../../../assets/icons/plus.svg');
+  transform: rotate(45deg);
+}

@@ -1,7 +1,9 @@
 import React from "react";
+import RootLayout from "./components/RootLayout";
+import './styles/main.scss';
 
 const App: React.FC = () => {
-  return <h1>Hello React</h1>;
+  return <RootLayout />
 };
 
 export default App;

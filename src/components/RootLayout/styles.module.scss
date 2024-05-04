@@ -1,0 +1,9 @@
+@import '../../styles/mixins';
+
+.wrapper {
+  width: 70%;
+  min-height: 100vh;
+  @include flex;
+  gap: 40px;
+  margin: auto;
+}

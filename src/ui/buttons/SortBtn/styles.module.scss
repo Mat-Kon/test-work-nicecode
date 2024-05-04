@@ -1,0 +1,6 @@
+@import '../../../styles/mixins';
+
+.sortBtn {
+  @include manageBtn;
+  background-image: url('../../../assets/icons/filter.svg');
+}

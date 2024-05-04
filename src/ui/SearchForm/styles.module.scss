@@ -1,0 +1,39 @@
+@import '../../styles/mixins';
+
+.wrapper {
+  flex: 1;
+  @include flex;
+}
+
+.form {
+  position: relative;
+  flex: 1;
+}
+
+.label {
+  @include flex($just: flex-start);
+  width: 100%;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../assets/icons/search.svg');
+  }
+}
+
+.input {
+  border-radius: 20px;
+  width: 95%;
+  padding: 7px 30px;
+  border: 1px solid $color-grey-light;
+  
+  &:focus {
+    outline: none;
+    border: 2px solid $color-grey-medium;
+  }
+}
