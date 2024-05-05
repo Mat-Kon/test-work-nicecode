@@ -2,7 +2,7 @@ export interface User {
   id: string;
   name: string | null;
   age: number;
-  gender: 'male' | 'female';
+  gender: string;
   email: string;
   avatar: string | null;
   notes: Note[];
@@ -20,10 +20,10 @@ interface Note {
 
 interface Consultation {
   id: string;
-  category: 'online' | 'offline';
+  category: string;
   start: string;
   end: string;
-  status: 'active' | 'confirmed' | 'not confirmed' | 'done';
+  status: string;
 }
 
 interface Video {
@@ -40,5 +40,5 @@ interface UserEvent {
   id: string;
   title: string;
   cover: string | null;
-  category: 'Вебинар';
+  category: string;
 }

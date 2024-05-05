@@ -9,6 +9,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<p>Main</p>} />
+          <Route path="user/:id" element={<p>Detail</p>} />
         </Route>
       </Routes>
     </BrowserRouter>

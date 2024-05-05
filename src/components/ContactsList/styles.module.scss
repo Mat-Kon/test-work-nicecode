@@ -1,0 +1,11 @@
+@import '../../styles/mixins';
+
+.list {
+  @include flex($dir: column);
+  gap: 10px;
+  list-style: none;
+
+  & li {
+    width: 100%;
+  }
+}
