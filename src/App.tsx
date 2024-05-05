@@ -1,18 +1,20 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import RootLayout from "./components/RootLayout";
 import './styles/main.scss';
+import DetailUser from "./components/DetailUser";
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<p>Main</p>} />
-          <Route path="user/:id" element={<p>Detail</p>} />
+          <Route path="user/:id" element={<DetailUser />} />
+          <Route path="user/:id/:category" element={<DetailUser />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 

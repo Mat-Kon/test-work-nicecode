@@ -22,8 +22,11 @@ const ContactList: React.FC = () => {
 
   return (
     <div>
-      <section>
-        <p>{contacts.length}</p>
+      <section className={styles.manageWrapper}>
+        <p className={styles.contactsCount}>{contacts.length}</p>
+        <div>
+          <button>Выбрать</button>
+        </div>
       </section>
       <section>
         <ul className={styles.list}>

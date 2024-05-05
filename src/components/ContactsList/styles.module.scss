@@ -9,3 +9,27 @@
     width: 100%;
   }
 }
+
+.manageWrapper {
+  @include flex($just: space-between);
+  width: 100%;
+  padding: 15px 10px;
+
+  & button {
+    border: none;
+    color: $color-grey-dark;
+    transition: all 0.5s;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-text-base
+    }
+  }
+}
+
+.contactsCount {
+  padding: 2px;
+  color: $color-white;
+  background-color: $color-grey-dark;
+  border-radius: 10px;
+}
