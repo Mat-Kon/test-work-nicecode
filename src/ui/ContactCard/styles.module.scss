@@ -1,0 +1,50 @@
+@import '../../styles/mixins';
+
+.wrapperBase {
+  @include flex($just: space-between);
+  width: 100%;
+  box-shadow: $base-shadow;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $color-white;
+}
+
+.wrapperMassage {
+  @include flex($just: space-between);
+  width: 100%;
+  box-shadow: $base-shadow;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $color-white;
+  border-left: 3px solid $color-blue;
+}
+
+.contactLink {
+  @include flex($just: space-between);
+  width: 95%;
+  text-decoration: none;
+  color: $color-text-base;
+  
+  & h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+}
+
+.shotInfo {
+  @include flex($just: flex-start);
+  gap: 10px;
+}
+
+.avatarImg {
+  width: 40px;
+  height: 40px;
+  border-radius:20px;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  object-fit: none;
+}

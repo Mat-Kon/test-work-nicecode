@@ -2,9 +2,10 @@
 
 .searchBar {
   @include flex($just: space-between);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: $base-shadow;
   padding: 10px;
   border-radius: 10px;
+  background-color: $color-white;
 }
 
 .rightBtns {
