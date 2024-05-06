@@ -1,6 +1,35 @@
 @import '../../../styles/mixins';
 
-.manageBtn {
+.wrapper {
+  position: relative;
+}
+
+.optionBtn {
   @include manageBtn;
   background-image: url('../../../assets/icons/coma.svg');
+}
+
+.manageBtns {
+  position: absolute;
+  top: 75%;
+  right: 50%;
+  @include flex($dir: column);
+  width: 200px;
+  background-color: $color-white;
+  box-shadow: $base-shadow;
+  border-radius: 5px;
+}
+
+.manageBtn {
+  text-align: left;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.6rem;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $color-grey-light;
+  }
 }

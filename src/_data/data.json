@@ -33,7 +33,7 @@
       {
         "id": "vidoe1",
         "url": "https://www.example.com/video1",
-        "cover": "path/to/cover1.jpg",
+        "cover": "video1",
         "title": "Video 1",
         "author": "Астахова Е.В.",
         "start": "2024-05-01T15:00:00",
@@ -188,7 +188,7 @@
       {
         "id": "vidoe3",
         "url": "https://www.example.com/video1",
-        "cover": "path/to/cover1.jpg",
+        "cover": "video1",
         "title": "Video 1",
         "author": "Астахова Е.В.",
         "start": "2024-05-01T15:00:00",
@@ -239,7 +239,7 @@
       {
         "id": "vidoe4",
         "url": "https://www.example.com/video1",
-        "cover": "path/to/cover1.jpg",
+        "cover": "video1",
         "title": "Video 1",
         "author": "Астахова Е.В.",
         "start": "2024-05-01T15:00:00",

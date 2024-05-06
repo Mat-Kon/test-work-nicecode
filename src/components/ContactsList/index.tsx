@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { type ChangeEvent, useEffect, useState } from 'react';
 import { User } from '../../_types/types';
 import ContactCard from '../../ui/ContactCard';
 import telegramIcon from '../../assets/icons/telegram.svg';
@@ -8,7 +8,9 @@ import styles from './styles.module.scss';
 const ContactList: React.FC = () => {
   const [contacts, setContacts] = useState<User[]>([]);
   const [isHiddenInputs, setHiddenInputs] = useState(true);
-  const [isHasMessage, setHasMessage] = useState(false);
+  const [isHasMessage, _] = useState(false);
+  const [countChecked, setCount] = useState(0);
+  const [isAllChecked, setAllChecked] = useState(false);
 
   useEffect(() => {
     const getUsers = async () => {
@@ -20,12 +22,51 @@ const ContactList: React.FC = () => {
     getUsers();
   }, [contacts, isHiddenInputs]);
 
+  const handleClickChooseBtn = () => {
+    setHiddenInputs(false);
+  };
+
+  const handleClickCancelBtn = () => {
+    setHiddenInputs(true);
+  };
+
+  const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const isChecked = e.target.checked;
+    setAllChecked(isChecked);
+  };
+
+  useEffect(() => {
+    if (isAllChecked) {
+      setCount(contacts.length);
+    } else {
+      setCount(0);
+    }
+  }, [isAllChecked, contacts]);
+
   return (
     <div>
       <section className={styles.manageWrapper}>
-        <p className={styles.contactsCount}>{contacts.length}</p>
-        <div>
-          <button>Выбрать</button>
+        {isHiddenInputs ?
+          <p className={styles.contactsCount}>{contacts.length}</p>
+          : (
+            <div className={styles.inputWrapper}>
+              <label>
+                <input type="checkbox" onChange={handleChangeInput} />
+                Все
+              </label>
+              <span className={styles.countChecked}>{countChecked}</span>
+            </div>
+          )}
+        <div className={styles.manageBtns}>
+          {isHiddenInputs ?
+            (
+              <button onClick={() => handleClickChooseBtn()}>Выбрать</button>
+            ) : (
+              <>
+                <button>Действия</button>
+                <button onClick={() => handleClickCancelBtn()}>Отменить</button>
+              </>
+            )}
         </div>
       </section>
       <section>
@@ -35,6 +76,8 @@ const ContactList: React.FC = () => {
               return (
                 <li key={contact.id}>
                   <ContactCard
+                    isAllChecked={isAllChecked}
+                    setCheckedCount={setCount}
                     isHiddenInput={isHiddenInputs}
                     userData={contact}
                     isHasMassage={true}
@@ -46,6 +89,8 @@ const ContactList: React.FC = () => {
               return (
                 <li key={contact.id}>
                   <ContactCard
+                    isAllChecked={isAllChecked}
+                    setCheckedCount={setCount}
                     isHiddenInput={isHiddenInputs}
                     userData={contact}
                     isHasMassage={isHasMessage}
@@ -57,12 +102,14 @@ const ContactList: React.FC = () => {
             return (
               <li key={contact.id}>
                 <ContactCard
+                  isAllChecked={isAllChecked}
+                  setCheckedCount={setCount}
                   isHiddenInput={isHiddenInputs}
                   userData={contact}
-                  isHasMassage={isHasMessage}/>
+                  isHasMassage={isHasMessage} />
               </li>
             );
-           })
+          })
           }
         </ul>
       </section>
