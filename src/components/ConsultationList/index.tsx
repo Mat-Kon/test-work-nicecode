@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import { Consultation, User } from '../../_types/types';
+import ConsultationItem from '../ConsultationItem';
 
 interface ConsultationListProps {
   id: string;
@@ -27,8 +28,7 @@ const ConsultationList: React.FC<ConsultationListProps> = ({ id }) => {
     <ul className={styles.list}>
       {consultations.map((consultation) => (
         <li key={consultation.id}>
-          {/* <ConsultationItem note={consultation}/> */}
-          ok
+          <ConsultationItem consultation={consultation}/>
         </li>
       ))}
     </ul>

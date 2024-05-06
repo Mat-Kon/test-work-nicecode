@@ -20,10 +20,10 @@ export interface Note {
 
 export interface Consultation {
   id: string;
-  category: string;
+  isOnline: boolean;
   start: string;
   end: string;
-  status: string;
+  isConfirmed: boolean;
 }
 
 export interface Video {
