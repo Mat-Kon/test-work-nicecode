@@ -1,0 +1,46 @@
+@import '../../styles/mixins';
+
+.wrapper {
+  @include flex($just: space-between, $align: flex-end);
+  width: 100%;
+
+  &:hover .iconWrapper {
+    background-color: $color-blue;
+  }
+}
+
+.info {
+  flex: 1;
+  @include flex($just: flex-start);
+  gap: 10px;
+  width: 50%;
+
+  & h4 {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  & span {
+    color: $color-grey-dark;
+    font-size: 1.2rem;
+  }
+}
+
+.iconWrapper {
+  @include flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: $color-grey-light;
+  transition: all 0.5s;
+
+  & img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.date {
+  color: $color-grey-dark;
+  font-size: 1.4rem;
+}

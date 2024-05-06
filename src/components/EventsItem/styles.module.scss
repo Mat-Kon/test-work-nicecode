@@ -1,0 +1,30 @@
+@import '../../styles/mixins';
+
+.wrapper {
+  @include flex($just: flex-start);
+  gap: 10px;
+  width: 100%;
+
+  &:hover .iconWrapper {
+    background-color: $color-blue;
+  }
+}
+
+.info {
+  @include flex($dir: column, $align: flex-start);
+  gap: 10px;
+  
+  & p, h4 {
+    font-weight: 400;
+  }
+}
+
+.info__details {
+  @include flex;
+  gap: 20px;
+  
+  & div {
+    @include flex;
+    gap: 5px
+  }
+}

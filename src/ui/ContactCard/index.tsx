@@ -1,9 +1,8 @@
 import React from 'react';
 import { User } from '../../_types/types';
-import { Link } from 'react-router-dom';
-import notAvatarIcon from '../../assets/icons/notFoto.svg';
-import images from '../../_data/images';
+import { Link, useParams } from 'react-router-dom';
 import styles from './styles.module.scss';
+import AvatarImg from '../../components/AvatarImg';
 
 interface ContactCardProps {
   userData: User;
@@ -13,11 +12,16 @@ interface ContactCardProps {
 }
 const ContactCard: React.FC<ContactCardProps> = ({ userData, icon, isHiddenInput, isHasMassage }) => {
   const { id, avatar, name, email } = userData;
-  const imagesSrc: Record<string, string> = { ...images };
   const shotName = name && name.split(' ').slice(0, 2).join(' ');
+  const { id: curId } = useParams();
 
   return (
-    <div className={isHasMassage ? styles.wrapperMassage : styles.wrapperBase}>
+    <div className={styles.wrapper}
+      style={{
+        borderLeft: `${isHasMassage ? '3px solid #4198C5' : ''}`,
+        backgroundColor: `${curId === id ? '#616f8226' : ''}`
+      }}
+    >
       {isHiddenInput
         ?
         null
@@ -28,19 +32,7 @@ const ContactCard: React.FC<ContactCardProps> = ({ userData, icon, isHiddenInput
       }
       <Link to={`/user/${id}`} className={styles.contactLink}>
         <div className={styles.shotInfo}>
-          <div>
-            {avatar
-            ?
-            <img className={styles.avatarImg}
-              src={`${imagesSrc[avatar.toLocaleLowerCase()]}`}
-              alt="фото"
-            />
-            :
-            <img className={styles.avatarImg}
-              src={`${notAvatarIcon}`}
-              alt="нет фото"
-            />}
-          </div>
+          <AvatarImg avatar={avatar} type='small'/>
           <h3>{shotName ?? email}</h3>
         </div>
         <div>

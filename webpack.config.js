@@ -35,6 +35,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html",
+      favicon: "src/assets/icons/notFoto.svg"
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new TerserPlugin(),
@@ -51,7 +52,13 @@ module.exports = {
     })
   ],
   devServer: {
+    static: {
+      directory: path.join(__dirname, 'src'),
+    },
+    compress: true,
     port: 9000,
+    hot: true,
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.json'],
@@ -59,5 +66,6 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
 };

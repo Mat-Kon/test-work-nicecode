@@ -1,0 +1,59 @@
+@import '../../styles/mixins';
+
+.navDetail {
+  @include flex($just: space-between);
+  width: 100%;
+  padding: 10px;
+  color: $color-grey-dark;
+  font-size: 1.6rem;
+}
+
+.navDetail__list {
+  @include flex($just: space-between);
+  color: $color-grey-dark;
+  list-style: none;
+
+  & li {
+    padding: 0 10px;
+    border-right: 1px solid $color-grey-dark;
+
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+
+    &:nth-child(4) {
+      padding-right: 0;
+      border-right: 0;
+    }
+  }
+}
+
+.pendingLink {
+  flex: 1;
+  color: $color-grey-dark;
+  text-decoration: none;
+  transition: all 0.5s;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.activeLink {
+  flex: 1;
+  text-decoration: none;
+  flex: 1;
+  color: $color-blue;
+}
+
+.btnContain {
+  @include flex;
+  gap: 10px;
+}
+
+.addBtn {
+  @include manageBtn;
+  width: 30px;
+  height: 30px;
+  background-image: url('../../assets/icons/addEventBtn.svg');
+}

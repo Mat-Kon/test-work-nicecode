@@ -11,34 +11,35 @@ export interface User {
   events: UserEvent[];
 }
 
-interface Note {
+export interface Note {
   id: string;
   content: string;
   createDate: string;
   images: string[];
 }
 
-interface Consultation {
+export interface Consultation {
   id: string;
-  category: string;
+  isOnline: boolean;
   start: string;
   end: string;
-  status: string;
+  isConfirmed: boolean;
 }
 
-interface Video {
+export interface Video {
   id: string;
   url: string;
   cover: string | null;
   title: string;
   author: string;
-  start: string;
-  end: string;
+  start: string | null;
+  end: string | null;
 }
 
-interface UserEvent {
+export interface UserEvent {
   id: string;
   title: string;
   cover: string | null;
   category: string;
+  date: string;
 }

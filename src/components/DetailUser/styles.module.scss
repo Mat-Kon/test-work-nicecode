@@ -1,0 +1,27 @@
+@import '../../styles//mixins';
+
+.wrapper {
+  height: 100%;
+}
+
+.infoBlock {
+  @include flex($align: flex-start, $just: space-between);
+  width: 100%;
+  padding: 5px;
+  background-color: $color-white;
+  border-radius: 5px;
+  box-shadow: $base-shadow;
+}
+
+.infoBlock__aboutUser {
+  @include flex($align: flex-start);
+  gap: 10px;
+}
+
+.infoBlock__info {
+  @include flex($dir: column, $just: flex-start, $align: flex-start);
+
+  & p {
+    font-size: 1.2rem;
+  }
+}

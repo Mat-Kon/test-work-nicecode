@@ -1,22 +1,18 @@
 @import '../../styles/mixins';
 
-.wrapperBase {
+.wrapper {
   @include flex($just: space-between);
   width: 100%;
   box-shadow: $base-shadow;
   padding: 10px;
   border-radius: 5px;
   background-color: $color-white;
-}
+  transition: all 0.5s;
 
-.wrapperMassage {
-  @include flex($just: space-between);
-  width: 100%;
-  box-shadow: $base-shadow;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: $color-white;
-  border-left: 3px solid $color-blue;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-blue
+  }
 }
 
 .contactLink {
@@ -24,11 +20,6 @@
   width: 95%;
   text-decoration: none;
   color: $color-text-base;
-  
-  & h3 {
-    font-size: 1.6rem;
-    font-weight: 400;
-  }
 }
 
 .shotInfo {
@@ -45,6 +36,7 @@
 .icon {
   width: 30px;
   height: 30px;
-  border-radius: 10px;
+  border-radius: 20px;
   object-fit: none;
+  background-color: $color-white
 }
