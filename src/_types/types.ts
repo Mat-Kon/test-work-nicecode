@@ -32,8 +32,8 @@ export interface Video {
   cover: string | null;
   title: string;
   author: string;
-  start: string;
-  end: string;
+  start: string | null;
+  end: string | null;
 }
 
 export interface UserEvent {
@@ -41,4 +41,5 @@ export interface UserEvent {
   title: string;
   cover: string | null;
   category: string;
+  date: string;
 }

@@ -1,7 +1,7 @@
 @import '../../styles/mixins';
 
 .wrapper {
-  width: 70%;
+  width: 80%;
   min-height: 100vh;
   @include flex($align: flex-start);
   gap: 30px;

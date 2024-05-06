@@ -35,7 +35,7 @@
         "url": "https://www.example.com/video1",
         "cover": "path/to/cover1.jpg",
         "title": "Video 1",
-        "author": "Author 1",
+        "author": "Астахова Е.В.",
         "start": "2024-05-01T15:00:00",
         "end": "2024-05-01T16:00:00"
       }
@@ -45,7 +45,8 @@
         "id": "event1",
         "title": "Event 1",
         "cover": "path/to/event1.jpg",
-        "category": "Вебинар"
+        "category": "Вебинар",
+        "date": "2024-03-09T17:00:00"
       }
     ]
   },
@@ -97,9 +98,27 @@
       {
         "id": "vidoe2",
         "url": "https://www.example.com/video1",
-        "cover": "path/to/cover1.jpg",
-        "title": "Video 1",
-        "author": "Author 1",
+        "cover": "video1",
+        "title": "Крабик, ходьба в бок в приседе с двумя резинками Кра…",
+        "author": "Астахова Е.В.",
+        "start": "2024-05-01T15:00:00",
+        "end": "2024-05-01T16:00:00"
+      },
+      {
+        "id": "vidoe34",
+        "url": "https://www.example.com/video1",
+        "cover": "video2",
+        "title": "Разминка для локтевого сустава",
+        "author": "Астахова Е.В.",
+        "start": "2024-05-01T15:00:00",
+        "end": "2024-05-01T16:00:00"
+      },
+      {
+        "id": "vidoe44",
+        "url": "https://www.example.com/video1",
+        "cover": "video3",
+        "title": "Разминка для локтевого суставаРазминка для локтевого..",
+        "author": "Астахова Е.В.",
         "start": "2024-05-01T15:00:00",
         "end": "2024-05-01T16:00:00"
       }
@@ -107,9 +126,31 @@
     "events": [
       {
         "id": "event2",
-        "title": "Event 1",
-        "cover": "path/to/event1.jpg",
-        "category": "Вебинар"
+        "title": "Тяга резинки в шаге со сгибанием локтя под 90 градусов",
+        "cover": "event1",
+        "category": "Вебинар",
+        "date": "2024-03-09T17:00:00"
+      },
+      {
+        "id": "event34",
+        "title": "Тяга резинки в шаге со сгибанием локтя под 90 градусов",
+        "cover": "event1",
+        "category": "Вебинар",
+        "date": "2024-03-09T17:00:00"
+      },
+      {
+        "id": "event233",
+        "title": "Тяга резинки в шаге со сгибанием локтя под 90 градусов",
+        "cover": "event1",
+        "category": "Вебинар",
+        "date": "2024-03-09T17:00:00"
+      },
+      {
+        "id": "event24",
+        "title": "Тяга резинки в шаге со сгибанием локтя под 90 градусов",
+        "cover": "event1",
+        "category": "Вебинар",
+        "date": "2024-03-09T17:00:00"
       }
     ]
   },
@@ -149,7 +190,7 @@
         "url": "https://www.example.com/video1",
         "cover": "path/to/cover1.jpg",
         "title": "Video 1",
-        "author": "Author 1",
+        "author": "Астахова Е.В.",
         "start": "2024-05-01T15:00:00",
         "end": "2024-05-01T16:00:00"
       }
@@ -159,7 +200,8 @@
         "id": "event4",
         "title": "Event 1",
         "cover": "path/to/event1.jpg",
-        "category": "Вебинар"
+        "category": "Вебинар",
+        "date": "2024-03-09T17:00:00"
       }
     ]
   },
@@ -199,7 +241,7 @@
         "url": "https://www.example.com/video1",
         "cover": "path/to/cover1.jpg",
         "title": "Video 1",
-        "author": "Author 1",
+        "author": "Астахова Е.В.",
         "start": "2024-05-01T15:00:00",
         "end": "2024-05-01T16:00:00"
       }
@@ -209,7 +251,8 @@
         "id": "event5",
         "title": "Event 1",
         "cover": "path/to/event1.jpg",
-        "category": "Вебинар"
+        "category": "Вебинар",
+        "date": "2024-03-09T17:00:00"
       }
     ]
   },

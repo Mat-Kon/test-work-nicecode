@@ -10,7 +10,6 @@
 
 .navDetail__list {
   @include flex($just: space-between);
-  width: 60%;
   color: $color-grey-dark;
   list-style: none;
 

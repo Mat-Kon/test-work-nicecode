@@ -9,9 +9,9 @@ interface ConsultationItemProps {
 const ConsultationItem: React.FC<ConsultationItemProps> = ({ consultation }) => {
   const { start, end, isOnline, isConfirmed } = consultation;
   const curDate = new Date(start);
-  const consultationDate = curDate.toISOString().split('T')[0];
-  const startConsultationTime = curDate.toTimeString().split(' ')[0].split(':').slice(0, 2).join(':');
-  const finishConsultationTime = new Date(end).toTimeString().split(' ')[0].split(':').slice(0, 2).join(':');
+  const consultationDate = curDate.toLocaleString('ru-RU').split(',')[0];
+  const startConsultationTime = curDate.toLocaleString('ru-RU').split(',')[1].slice(0, 6);
+  const finishConsultationTime = new Date(end).toLocaleString('ru-RU').split(',')[1].slice(0, 6);
 
   return (
     <section className={styles.wrapper}>
