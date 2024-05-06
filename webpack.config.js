@@ -35,6 +35,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html",
+      favicon: "src/assets/icons/notFoto.svg"
     }),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new TerserPlugin(),

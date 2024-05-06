@@ -1,0 +1,6 @@
+@import '../../../styles/mixins';
+
+.manageBtn {
+  @include manageBtn;
+  background-image: url('../../../assets/icons/coma.svg');
+}

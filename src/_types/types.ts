@@ -11,14 +11,14 @@ export interface User {
   events: UserEvent[];
 }
 
-interface Note {
+export interface Note {
   id: string;
   content: string;
   createDate: string;
   images: string[];
 }
 
-interface Consultation {
+export interface Consultation {
   id: string;
   category: string;
   start: string;
@@ -26,7 +26,7 @@ interface Consultation {
   status: string;
 }
 
-interface Video {
+export interface Video {
   id: string;
   url: string;
   cover: string | null;
@@ -36,7 +36,7 @@ interface Video {
   end: string;
 }
 
-interface UserEvent {
+export interface UserEvent {
   id: string;
   title: string;
   cover: string | null;

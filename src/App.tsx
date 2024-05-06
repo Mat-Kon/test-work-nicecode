@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import RootLayout from "./components/RootLayout";
 import './styles/main.scss';
 import DetailUser from "./components/DetailUser";
+import UserPage from "./components/UserPage";
 
 const App: React.FC = () => {
   return (
@@ -10,8 +11,9 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<p>Main</p>} />
-          <Route path="user/:id" element={<DetailUser />} />
-          <Route path="user/:id/:category" element={<DetailUser />} />
+          <Route path="user/:id" element={<DetailUser />}>
+            <Route path=":category" element={<UserPage />} />
+          </Route>
         </Route>
       </Routes>
     </Router>

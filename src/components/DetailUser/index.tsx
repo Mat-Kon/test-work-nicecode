@@ -3,7 +3,8 @@ import { Outlet, useParams } from 'react-router-dom';
 import { User } from '../../_types/types';
 import styles from './styles.module.scss';
 import AvatarImg from '../AvatarImg';
-import NavDetail from '../NavDetail';
+import NavDetail from '../../ui/NavDetail';
+import OptionBtn from '../../ui/buttons/OptionBtn';
 
 const DetailUser: React.FC = () => {
   const [userData, setUserData] = useState<User | null>(null);
@@ -21,7 +22,7 @@ const DetailUser: React.FC = () => {
   }, [id]);
 
   return userData ? (
-    <section>
+    <section className={styles.wrapper}>
       <div className={styles.infoBlock}>
         <div className={styles.infoBlock__aboutUser}>
           <AvatarImg avatar={userData.avatar} type='medium'/>
@@ -30,7 +31,7 @@ const DetailUser: React.FC = () => {
             <p>{`${userData.age} лет, ${userData.gender === 'male' ? 'муж' : 'жен'}`}</p>
           </div>
         </div>
-        <button className={styles.manageBtn}></button>
+        <OptionBtn />
       </div>
       <NavDetail id={id}/>
       <Outlet />

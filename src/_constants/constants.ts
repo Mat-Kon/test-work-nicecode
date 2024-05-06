@@ -1,4 +1,4 @@
-const LINKS_LIST = [
+const LINKS_LIST: (Record<string, string>)[] = [
   {
     link: './notes',
     title: 'Заметки'
@@ -17,6 +17,15 @@ const LINKS_LIST = [
   }
 ];
 
+const BTN_TITLES: Record<string, string> = {
+  notes: 'Новая заметка',
+  consultation: 'Запись',
+  videos: 'Рекомендовать',
+  events: 'Рекомендовать'
+}
+
+
 export {
-  LINKS_LIST
+  LINKS_LIST,
+  BTN_TITLES
 }

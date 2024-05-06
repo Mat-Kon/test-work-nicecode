@@ -14,7 +14,6 @@ const ContactCard: React.FC<ContactCardProps> = ({ userData, icon, isHiddenInput
   const { id, avatar, name, email } = userData;
   const shotName = name && name.split(' ').slice(0, 2).join(' ');
   const { id: curId } = useParams();
-  console.log(curId)
 
   return (
     <div className={styles.wrapper}

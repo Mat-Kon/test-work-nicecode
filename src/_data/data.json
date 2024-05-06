@@ -67,10 +67,24 @@
         "id": "note4",
         "content": "Улучшенное питание мышечной ткани ускоряет замещение различных посттравматических дефектов в самих мышцах, костной ткани, связках и сухожилиях.",
         "createDate": "20-12-2019",
-        "images": []
+        "images": ["noteImg"]
       }
     ],
     "consultations": [
+      {
+        "id": "consultation2",
+        "category": "online",
+        "start": "2024-05-05T10:00:00",
+        "end": "2024-05-05T11:00:00",
+        "status": "confirmed"
+      },
+      {
+        "id": "consultation2",
+        "category": "online",
+        "start": "2024-05-05T10:00:00",
+        "end": "2024-05-05T11:00:00",
+        "status": "confirmed"
+      },
       {
         "id": "consultation2",
         "category": "online",

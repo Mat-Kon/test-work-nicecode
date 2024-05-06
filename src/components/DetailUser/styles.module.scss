@@ -1,5 +1,9 @@
 @import '../../styles//mixins';
 
+.wrapper {
+  height: 100%;
+}
+
 .infoBlock {
   @include flex($align: flex-start, $just: space-between);
   width: 100%;
@@ -12,11 +16,6 @@
 .infoBlock__aboutUser {
   @include flex($align: flex-start);
   gap: 10px;
-}
-
-.manageBtn {
-  @include manageBtn;
-  background-image: url('../../assets/icons/coma.svg');
 }
 
 .infoBlock__info {
