@@ -10,7 +10,7 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         <Route path="/" element={<RootLayout />}>
-          <Route index element={<p>Main</p>} />
+          <Route index element={<DetailUser />} />
           <Route path="user/:id" element={<DetailUser />}>
             <Route path=":category" element={<UserPage />} />
           </Route>
